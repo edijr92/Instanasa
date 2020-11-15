@@ -1,7 +1,7 @@
 import { NasaActionTypes } from '../actions/test';
 
 const initialState = {
-    test: [],
+    rover: {},
 };
 
 export const nasaReducer = (
@@ -9,10 +9,10 @@ export const nasaReducer = (
     action
 ) => {
     switch (action.type) {
-        case NasaActionTypes.NASA:
+        case NasaActionTypes.GET_ROVER:
             return {
                 ...state,
-                test: action.payload
+                rover: action.payload
             }
         default:
             return state

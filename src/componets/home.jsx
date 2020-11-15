@@ -14,13 +14,12 @@ const images = [
     },
     {
         url: 'https://mars-photos.herokuapp.com/explore/images/Opportunity_rover.jpg',
-        title: 'Oportunity',
+        title: 'Opportunity',
     },
 ];
 
 export default function Home() {
     const classes = useStyles();
-
     return (
         <Container >
             <div style={{ textAlign: 'center' }}>
