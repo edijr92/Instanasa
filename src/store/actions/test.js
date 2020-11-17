@@ -7,9 +7,9 @@ export const NasaActionTypes = {
 
 }
 
-export const getNasaPhotos = (nombre, sol) => {
+export const getNasaPhotos = (nombre, sol, setup) => {
     return dispatch => {
-        return axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${nombre}/photos?sol=${sol}&api_key=4daGu2mWR24Eo3VEXpfvcBORkEEu3ieMXbkNmLxI`)
+        return axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${nombre}/photos?sol=${sol}&page=${setup}&api_key=4daGu2mWR24Eo3VEXpfvcBORkEEu3ieMXbkNmLxI`)
             .then((res) => dispatch({ type: NasaActionTypes.GET_ROVER, payload: res.data }))
             .catch(err => console.log(err))
     }
